@@ -96,16 +96,14 @@ public class Corrida extends JFrame {
 		
 		ActionListener inicia = new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				correr.setBounds(0, 0, 0, 0);
 				Thread carro1 = new CorridaThread(lblNewLabel,0,vencedor,perdedor);
 				Thread carro2 = new CorridaThread(lblNewLabel2,1,vencedor,perdedor);
 				carro1.start();
 				carro2.start();
+				
 			}
 		};
 		correr.addActionListener(inicia);
-	}
-	
-	public void colocacao(String carro1,String carro2) {
-		
 	}
 }
